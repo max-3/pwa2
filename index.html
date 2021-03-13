@@ -21,22 +21,21 @@
     </div>
     <!-- <script src="js/main.js"></script> -->
     <script>
+
       let fest = document.createElement("link");
       let url = "//max-3.github.io/pwa/manifest.json";
       fest.rel = "manifest";
       fest.href = `${url}`;
       document.head.append(fest);
-
       window.onload = () => {
         "use strict";
-
         if ("serviceWorker" in navigator) {
           navigator.serviceWorker.register(
             "//max-3.github.io/pwa/worker.js"
           );
-          // navigator.serviceWorker.register("./service-w5.js");
         }
       };
+      
     </script>
   </body>
 </html>
